@@ -1,7 +1,7 @@
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
-           
+
              <th width="1%">Peringkat</th>
 			<th>Nama</th>
             <th>Total Point</th>
@@ -9,8 +9,8 @@
     </thead>
     <tbody>
         <?php
-        
-        include "../ajax/db_connection.php";
+
+        include "ajax/db_connection.php";
     $no= 1;
         $keyword="";
         if (isset($_POST['search'])) {
@@ -23,12 +23,12 @@
             while ($data = mysqli_fetch_array($query)) {
                 ?>
                 <tr>
-                  
+
                      <td><?php echo $no++; ?></td>
                     <td><?php echo $data['username']; ?></td>
                     <td><?php echo $data['jumlah']; ?></td>
                 </tr>
-            <?php } } else { ?> 
+            <?php } } else { ?>
                 <tr>
                     <td colspan='4' class="text-center">Tidak ada data ditemukan</td>
                 </tr>
