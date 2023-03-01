@@ -11,8 +11,10 @@ $pass		 = $_POST['pass'];
 
 <?php
 $servername = "localhost";
-$username = "n1609672_member";
-$password = "Z5i1ec(6hMa4";
+// $username = "n1609672_member";
+$username = "root";
+// $password = "Z5i1ec(6hMa4";
+$password = "";
 $dbname = "n1609672_ppcmember";
 
 // Create connection
@@ -34,5 +36,5 @@ if ($conn->multi_query($sql) === TRUE) {
 }
 
 $conn->close();
- header("location: index.php");
+ header("location: index.html");
 ?>
